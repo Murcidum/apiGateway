@@ -1,0 +1,20 @@
+HELP.md
+.gradle/
+build/
+
+# Gradle wrapper jar (keep properties and scripts, ignore the binary jar if downloaded locally)
+!gradle/wrapper/gradle-wrapper.jar
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+### VS Code ###
+.vscode/
+
+### OS ###
+.DS_Store
+Thumbs.db
