@@ -5,6 +5,12 @@ spring:
   application:
     name: api-gateway
 
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8081/realms/gateway-realm
+
   cloud:
     gateway:
       server:
@@ -21,7 +27,9 @@ spring:
           globalcors:
             cors-configurations:
               '[/**]':
-                allowedOrigins: "*"
+                allowedOriginPatterns:
+                  - "http://localhost:*"
+                allowCredentials: true
                 allowedMethods:
                   - GET
                   - POST
